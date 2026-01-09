@@ -89,138 +89,207 @@
     }
 
     button {
-      padding: 14px 22px;
-      border-radius: 8px;
-      border: none;
-      background: #00f5ff;
-      color: #000;
-      font-weight: 600;
-      cursor: pointer;
-    }
+      <!DOCTYPE html>
+      <html lang="en">
+      <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    footer {
-      margin-top: 40px;
-      font-size: 13px;
-      color: #777;
-    }
+        <!-- SEO -->
+        <title>XenonEdge | Under Construction – Software & Cloud Solutions</title>
+        <meta name="description" content="XenonEdge is building a modern software platform focused on web development, cloud technology, and scalable digital solutions." />
+        <meta name="keywords" content="XenonEdge, software company, web development, cloud solutions, scalable software" />
 
-    /* Popup */
-    .popup {
-      position: fixed;
-      inset: 0;
-      background: rgba(0,0,0,0.7);
-      display: none;
-      align-items: center;
-      justify-content: center;
-      padding: 20px;
-    }
+        <!-- Favicon X -->
+        <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='18' fill='%23000000'/%3E%3Ctext x='50%25' y='65%25' text-anchor='middle' font-size='64' fill='white' font-family='Arial'%3EX%3C/text%3E%3C/svg%3E">
 
-    .popup-box {
-      background: #111;
-      padding: 24px;
-      border-radius: 12px;
-      text-align: center;
-      width: 100%;
-      max-width: 320px;
-    }
+        <style>
+          * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+          }
 
-    .popup-box h2 {
-      color: #00f5ff;
-      margin-bottom: 10px;
-      font-size: 20px;
-    }
+          body {
+            min-height: 100vh;
+            background: #0a0a0a;
+            color: #ffffff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
 
-    .popup-box p {
-      font-size: 14px;
-      color: #ccc;
-      margin-bottom: 20px;
-    }
+          .page {
+            width: 100%;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 24px;
+            background: radial-gradient(circle at top, #111, #000);
+          }
 
-    @media (max-width: 480px) {
-      .logo {
-        font-size: 30px;
-      }
-      h1 {
-        font-size: 24px;
-      }
-      p {
-        font-size: 15px;
-      }
-    }
-  <!DOCTYPE html>
-  <html lang="en">
-    <head>
-      <meta charset="utf-8" />
-      <meta name="viewport" content="width=device-width,initial-scale=1" />
-      <title>XenonEdge — Coming Soon</title>
-      <style>
-        html, body {
-          height: 100%;
-          margin: 0;
-        }
-        body {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-          background: linear-gradient(180deg,#071324 0%, #00121a 100%);
-          color: #e6f7ff;
-        }
-        .wrap {
-          width: 100%;
-          height: 100%;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-        }
-        .card {
-          text-align: center;
-          padding: 40px 28px;
-          max-width: 900px;
-          width: 100%;
-        }
-        h1 {
-          font-size: 48px;
-          margin: 0 0 12px 0;
-          letter-spacing: 1px;
-        }
-        p {
-          margin: 0 0 20px 0;
-          color: #bfefff;
-          opacity: 0.9;
-          font-size: 18px;
-        }
-        .small {
-          opacity: 0.8;
-          font-size: 13px;
-        }
-        .brand {
-          display: inline-block;
-          padding: 8px 14px;
-          border-radius: 999px;
-          background: rgba(255,255,255,0.06);
-          color: #9ef2ff;
-          margin-bottom: 18px;
-          font-weight: 700;
-        }
-        @media (max-width:600px) {
-          h1 { font-size: 28px }
-          .card { padding: 28px 18px }
-        }
-      </style>
-    </head>
-    <body>
-      <div class="wrap">
-        <div class="card">
-          <div class="brand">XENONEDGE</div>
-          <h1>Coming Soon</h1>
-          <p>Simple, fast, and beautiful web experiences — launching shortly.</p>
-          <div class="small">© <span id="year"></span> XenonEdge</div>
+          .content {
+            width: 100%;
+            max-width: 700px;
+            text-align: center;
+          }
+
+          .logo {
+            font-size: 36px;
+            font-weight: 800;
+            letter-spacing: 2px;
+            color: #00f5ff;
+            margin-bottom: 10px;
+          }
+
+          .tag {
+            font-size: 14px;
+            color: #00f5ff;
+            margin-bottom: 24px;
+          }
+
+          h1 {
+            font-size: 28px;
+            margin-bottom: 16px;
+          }
+
+          p {
+            font-size: 16px;
+            line-height: 1.6;
+            color: #cfcfcf;
+            margin-bottom: 28px;
+          }
+
+          .input-box {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            justify-content: center;
+          }
+
+          input {
+            padding: 14px;
+            width: 100%;
+            max-width: 320px;
+            border-radius: 8px;
+            border: 1px solid #333;
+            background: #111;
+            color: #fff;
+          }
+
+          button {
+            padding: 14px 22px;
+            border-radius: 8px;
+            border: none;
+            background: #00f5ff;
+            color: #000;
+            font-weight: 600;
+            cursor: pointer;
+          }
+
+          footer {
+            margin-top: 40px;
+            font-size: 13px;
+            color: #777;
+          }
+
+          /* Popup */
+          .popup {
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,0.7);
+            display: none;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+          }
+
+          .popup-box {
+            background: #111;
+            padding: 24px;
+            border-radius: 12px;
+            text-align: center;
+            width: 100%;
+            max-width: 320px;
+          }
+
+          .popup-box h2 {
+            color: #00f5ff;
+            margin-bottom: 10px;
+            font-size: 20px;
+          }
+
+          .popup-box p {
+            font-size: 14px;
+            color: #ccc;
+            margin-bottom: 20px;
+          }
+
+          @media (max-width: 480px) {
+            .logo {
+              font-size: 30px;
+            }
+            h1 {
+              font-size: 24px;
+            }
+            p {
+              font-size: 15px;
+            }
+          }
+        </style>
+      </head>
+      <body>
+
+      <div class="page">
+        <div class="content">
+          <div class="logo">XENONEDGE</div>
+          <div class="tag">Under Construction</div>
+
+          <h1>Next-Generation Software Solutions</h1>
+
+          <p>
+            We’re building a modern software platform focused on web development,
+            scalable cloud solutions, and digital innovation to help businesses grow faster.
+          </p>
+
+          <form class="input-box" onsubmit="notifyUser(event)">
+            <input type="email" id="email" placeholder="Enter your email" required />
+            <button type="submit">Notify Me</button>
+          </form>
+
+          <footer>
+            © <span id="year"></span> XenonEdge. All rights reserved.
+          </footer>
+        </div>
+      </div>
+
+      <!-- Popup -->
+      <div class="popup" id="popup">
+        <div class="popup-box">
+          <h2>Thank You!</h2>
+          <p id="popupText"></p>
+          <button onclick="closePopup()">Close</button>
         </div>
       </div>
 
       <script>
-        document.getElementById('year').textContent = new Date().getFullYear();
+        document.getElementById("year").textContent = new Date().getFullYear();
+
+        function notifyUser(e) {
+          e.preventDefault();
+          const email = document.getElementById("email").value;
+          document.getElementById("popupText").textContent =
+            "We’ll notify you at " + email + " when XenonEdge launches.";
+          document.getElementById("popup").style.display = "flex";
+          document.getElementById("email").value = "";
+        }
+
+        function closePopup() {
+          document.getElementById("popup").style.display = "none";
+        }
       </script>
-    </body>
-  </html>
+
+      </body>
+      </html>
