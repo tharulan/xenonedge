@@ -1,306 +1,226 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Basic Meta -->
   <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <!-- SEO Meta -->
-  <title>XenonEdge | Next-Gen Software Solutions – Under Construction</title>
-  <meta name="description" content="XenonEdge is building a next-generation software platform focused on modern web development, scalable cloud solutions, and digital innovation. Launching soon." />
-  <meta name="keywords" content="XenonEdge, software company, web development, cloud solutions, digital innovation, scalable software, tech startup" />
-  <meta name="author" content="XenonEdge (PVT) LTD" />
+  <!-- SEO -->
+  <title>XenonEdge | Under Construction – Software & Cloud Solutions</title>
+  <meta name="description" content="XenonEdge is building a modern software platform focused on web development, cloud technology, and scalable digital solutions." />
+  <meta name="keywords" content="XenonEdge, software company, web development, cloud solutions, scalable software" />
 
-  <!-- Open Graph -->
-  <meta property="og:title" content="XenonEdge – Next-Generation Software Solutions" />
-  <meta property="og:description" content="We’re building modern, scalable, cloud-first software to help businesses grow faster. Launching soon." />
-  <meta property="og:type" content="website" />
-
-  <!-- Favicon (X Icon) -->
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%23000000'/%3E%3Ctext x='50%25' y='65%25' text-anchor='middle' font-size='64' fill='white' font-family='Arial, Helvetica, sans-serif'%3EX%3C/text%3E%3C/svg%3E">
+  <!-- Favicon X -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='18' fill='%23000000'/%3E%3Ctext x='50%25' y='65%25' text-anchor='middle' font-size='64' fill='white' font-family='Arial'%3EX%3C/text%3E%3C/svg%3E">
 
   <style>
-    /* Popup Styles */
-.popup-overlay {
-  position: fixed;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.7);
-  display: none;
-  align-items: center;
-  justify-content: center;
-  z-index: 999;
-}
-
-.popup-box {
-  background: #0f0f0f;
-  border-radius: 16px;
-  padding: 30px;
-  max-width: 360px;
-  width: 90%;
-  text-align: center;
-  box-shadow: 0 20px 60px rgba(0, 245, 255, 0.3);
-  animation: pop 0.3s ease;
-}
-
-.popup-box h2 {
-  color: #00f5ff;
-  margin-bottom: 10px;
-}
-
-.popup-box p {
-  color: #ccc;
-  margin-bottom: 20px;
-  font-size: 15px;
-}
-
-.popup-box button {
-  padding: 12px 20px;
-  border-radius: 10px;
-  border: none;
-  cursor: pointer;
-  background: linear-gradient(135deg, #00f5ff, #7cf3ff);
-  color: #000;
-  font-weight: 600;
-}
-
-@keyframes pop {
-  from {
-    transform: scale(0.9);
-    opacity: 0;
-  }
-  to {
-    transform: scale(1);
-    opacity: 1;
-  }
-}
-
-    :root {
-      --bg: #0a0a0a;
-      --card: #111;
-      --primary: #00f5ff;
-      --secondary: #7ce9ff;
-      --text: #eaeaea;
-      --muted: #a0a0a0;
-    }
-
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-      font-family: 'Segoe UI', system-ui, sans-serif;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
     }
 
     body {
       min-height: 100vh;
-      background: radial-gradient(circle at top, #0f2027, var(--bg));
-      color: var(--text);
+      background: #0a0a0a;
+      color: #ffffff;
       display: flex;
       align-items: center;
       justify-content: center;
-      padding: 20px;
     }
 
-    .container {
-      max-width: 900px;
+    .page {
       width: 100%;
-      background: linear-gradient(180deg, #0f0f0f, #090909);
-      border-radius: 20px;
-      padding: 50px 40px;
-      box-shadow: 0 30px 80px rgba(0, 0, 0, 0.7);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      background: radial-gradient(circle at top, #111, #000);
+    }
+
+    .content {
+      width: 100%;
+      max-width: 700px;
       text-align: center;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .container::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(120deg, transparent, rgba(0, 245, 255, 0.08), transparent);
-      animation: glow 6s infinite linear;
-    }
-
-    @keyframes glow {
-      0% { transform: translateX(-100%); }
-      100% { transform: translateX(100%); }
     }
 
     .logo {
-      font-size: 42px;
+      font-size: 36px;
       font-weight: 800;
       letter-spacing: 2px;
-      color: var(--primary);
+      color: #00f5ff;
       margin-bottom: 10px;
-      z-index: 1;
-      position: relative;
     }
 
-    .badge {
-      display: inline-block;
-      padding: 6px 16px;
-      border-radius: 999px;
-      background: rgba(0, 245, 255, 0.12);
-      color: var(--secondary);
+    .tag {
       font-size: 14px;
-      margin-bottom: 25px;
-      z-index: 1;
-      position: relative;
+      color: #00f5ff;
+      margin-bottom: 24px;
     }
 
     h1 {
-      font-size: 34px;
-      margin-bottom: 20px;
-      z-index: 1;
-      position: relative;
+      font-size: 28px;
+      margin-bottom: 16px;
     }
 
     p {
-      font-size: 17px;
-      line-height: 1.7;
-      color: var(--muted);
-      max-width: 720px;
-      margin: 0 auto 35px;
-      z-index: 1;
-      position: relative;
+      font-size: 16px;
+      line-height: 1.6;
+      color: #cfcfcf;
+      margin-bottom: 28px;
     }
 
-    .features {
+    .input-box {
       display: flex;
+      gap: 10px;
       flex-wrap: wrap;
-      gap: 16px;
       justify-content: center;
-      margin-bottom: 40px;
-      z-index: 1;
-      position: relative;
     }
 
-    .feature {
-      background: var(--card);
-      padding: 14px 20px;
-      border-radius: 12px;
-      font-size: 14px;
-      color: var(--secondary);
-      border: 1px solid rgba(0, 245, 255, 0.15);
+    input {
+      padding: 14px;
+      width: 100%;
+      max-width: 320px;
+      border-radius: 8px;
+      border: 1px solid #333;
+      background: #111;
+      color: #fff;
     }
 
-    .cta {
-      margin-top: 20px;
-      z-index: 1;
-      position: relative;
-    }
-
-    .cta input {
-      padding: 14px 16px;
-      border-radius: 10px;
-      border: none;
-      outline: none;
-      width: 260px;
-      max-width: 100%;
-      margin-right: 8px;
-      background: #0f0f0f;
-      color: var(--text);
-      border: 1px solid rgba(255,255,255,0.1);
-    }
-
-    .cta button {
+    button {
       padding: 14px 22px;
-      border-radius: 10px;
+      border-radius: 8px;
       border: none;
-      cursor: pointer;
-      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      background: #00f5ff;
       color: #000;
       font-weight: 600;
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-    }
-
-    .cta button:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 10px 30px rgba(0, 245, 255, 0.4);
+      cursor: pointer;
     }
 
     footer {
       margin-top: 40px;
       font-size: 13px;
       color: #777;
-      z-index: 1;
-      position: relative;
     }
 
-    @media (max-width: 600px) {
-      h1 {
-        font-size: 26px;
-      }
+    /* Popup */
+    .popup {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.7);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .popup-box {
+      background: #111;
+      padding: 24px;
+      border-radius: 12px;
+      text-align: center;
+      width: 100%;
+      max-width: 320px;
+    }
+
+    .popup-box h2 {
+      color: #00f5ff;
+      margin-bottom: 10px;
+      font-size: 20px;
+    }
+
+    .popup-box p {
+      font-size: 14px;
+      color: #ccc;
+      margin-bottom: 20px;
+    }
+
+    @media (max-width: 480px) {
       .logo {
-        font-size: 34px;
+        font-size: 30px;
+      }
+      h1 {
+        font-size: 24px;
+      }
+      p {
+        font-size: 15px;
       }
     }
-  </style>
-</head>
-<body>
+  <!DOCTYPE html>
+  <html lang="en">
+    <head>
+      <meta charset="utf-8" />
+      <meta name="viewport" content="width=device-width,initial-scale=1" />
+      <title>XenonEdge — Coming Soon</title>
+      <style>
+        html, body {
+          height: 100%;
+          margin: 0;
+        }
+        body {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+          background: linear-gradient(180deg,#071324 0%, #00121a 100%);
+          color: #e6f7ff;
+        }
+        .wrap {
+          width: 100%;
+          height: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+        .card {
+          text-align: center;
+          padding: 40px 28px;
+          max-width: 900px;
+          width: 100%;
+        }
+        h1 {
+          font-size: 48px;
+          margin: 0 0 12px 0;
+          letter-spacing: 1px;
+        }
+        p {
+          margin: 0 0 20px 0;
+          color: #bfefff;
+          opacity: 0.9;
+          font-size: 18px;
+        }
+        .small {
+          opacity: 0.8;
+          font-size: 13px;
+        }
+        .brand {
+          display: inline-block;
+          padding: 8px 14px;
+          border-radius: 999px;
+          background: rgba(255,255,255,0.06);
+          color: #9ef2ff;
+          margin-bottom: 18px;
+          font-weight: 700;
+        }
+        @media (max-width:600px) {
+          h1 { font-size: 28px }
+          .card { padding: 28px 18px }
+        }
+      </style>
+    </head>
+    <body>
+      <div class="wrap">
+        <div class="card">
+          <div class="brand">XENONEDGE</div>
+          <h1>Coming Soon</h1>
+          <p>Simple, fast, and beautiful web experiences — launching shortly.</p>
+          <div class="small">© <span id="year"></span> XenonEdge</div>
+        </div>
+      </div>
 
-  <main class="container">
-    <div class="logo">XENONEDGE</div>
-    <div class="badge">Under Construction</div>
-
-    <h1>Next-Generation Software Solutions</h1>
-
-    <p>
-      We’re building a next-generation software platform focused on
-      <strong>modern web development</strong>, <strong>scalable solutions</strong>,
-      <strong>cloud technology</strong>, and <strong>digital innovation</strong>.
-      <br><br>
-      The new XenonEdge website will showcase powerful software products,
-      clean design, and technology that helps businesses grow faster.
-    </p>
-
-    <div class="features">
-      <div class="feature">Modern Web Development</div>
-      <div class="feature">Cloud-First Architecture</div>
-      <div class="feature">Scalable Software</div>
-      <div class="feature">Clean UI / UX</div>
-      <div class="feature">Digital Innovation</div>
-    </div>
-
-    <div class="cta">
-      <form onsubmit="subscribe(event)">
-        <input type="email" id="email" placeholder="Enter your email" required />
-        <button type="submit">Notify Me</button>
-      </form>
-    </div>
-
-    <footer>
-      © <span id="year"></span> XenonEdge (PVT) LTD. All rights reserved.
-    </footer>
-  </main>
-
- <script>
-  document.getElementById("year").textContent = new Date().getFullYear();
-
-  function subscribe(e) {
-    e.preventDefault();
-    const email = document.getElementById("email").value;
-
-    document.getElementById("popupText").textContent =
-      "We’ll notify you at " + email + " when XenonEdge launches.";
-
-    document.getElementById("popup").style.display = "flex";
-    document.getElementById("email").value = "";
-  }
-
-  function closePopup() {
-    document.getElementById("popup").style.display = "none";
-  }
-</script>
-
-
-</body>
-<!-- Popup Modal -->
-<div id="popup" class="popup-overlay">
-  <div class="popup-box">
-    <h2>You’re on the list!</h2>
-    <p id="popupText"></p>
-    <button onclick="closePopup()">Close</button>
-  </div>
-</div>
-</html>
+      <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+      </script>
+    </body>
+  </html>
